@@ -4,7 +4,7 @@ class Solution:
         result = 0
         for i in range(len(s) - 1, -1, -1):
             num = roman[s[i]]
-            if 4 * num >= result:
+            if 4 * num > result:
                 result += num 
             else:
                 result -= num
