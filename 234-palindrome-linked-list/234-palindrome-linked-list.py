@@ -8,10 +8,10 @@ class Solution:
         # two pointers fast - slow - Floyd cycle detection
         fast = head
         slow = head
-        prev = None # previous node 
         while fast != None and fast.next != None:
             slow = slow.next
             fast = fast.next.next
+        prev = None # previous node 
         while slow:
             tmp = slow.next
             slow.next = prev
