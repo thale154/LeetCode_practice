@@ -13,10 +13,8 @@ class Solution:
             fast = fast.next.next
         prev = None # previous node 
         while slow:
-            tmp = slow.next
-            slow.next = prev
-            prev = slow
-            slow = tmp
+            #tmp = slow.next
+            slow.next, prev, slow = prev, slow, slow.next
         while prev:
             if head.val != prev.val: return False
             head, prev = head.next, prev.next
