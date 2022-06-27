@@ -12,11 +12,11 @@ class Solution:
         while fast != None and fast.next != None:
             slow = slow.next
             fast = fast.next.next
-        while slow != None:
+        while slow:
             #tmp = slow.next
             slow.next, prev, slow = prev, slow, slow.next
         fast, slow = head, prev
-        while slow != None:
+        while slow:
             if fast.val != slow.val: return False
             fast, slow = fast.next, slow.next
         return True
