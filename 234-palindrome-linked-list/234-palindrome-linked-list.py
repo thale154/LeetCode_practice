@@ -17,8 +17,7 @@ class Solution:
             slow.next = prev
             prev = slow
             slow = tmp
-        fast, slow = head, prev
-        while slow:
-            if fast.val != slow.val: return False
-            fast, slow = fast.next, slow.next
+        while prev:
+            if head.val != prev.val: return False
+            head, prev = head.next, prev.next
         return True
