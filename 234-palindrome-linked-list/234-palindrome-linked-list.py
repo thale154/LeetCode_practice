@@ -10,7 +10,7 @@ class Solution:
         prev = None # previous node 
         while fast and fast.next:
             slow, fast = slow.next, fast.next.next
-        prev, slow, prev.next = slow, slow.next, None
+        prev = None
         while slow:
             #tmp = slow.next
             slow.next, prev, slow = prev, slow, slow.next
