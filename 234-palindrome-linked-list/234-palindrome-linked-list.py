@@ -13,10 +13,8 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
         while slow:
-            tmp = slow.next
-            slow.next = prev
-            prev = slow
-            slow = tmp
+            #tmp = slow.next
+            slow.next, prev, slow = prev, slow, slow.next
         fast, slow = head, prev
         while slow:
             if fast.val != slow.val: return False
