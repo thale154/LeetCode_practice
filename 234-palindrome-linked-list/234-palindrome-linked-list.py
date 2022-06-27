@@ -6,11 +6,11 @@
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         # two pointers fast - slow - Floyd cycle detection
-        fast = slow = head
+        fast = head
+        slow = head
         prev = None # previous node 
         while fast and fast.next:
             slow, fast = slow.next, fast.next.next
-        prev = None
         while slow:
             #tmp = slow.next
             slow.next, prev, slow = prev, slow, slow.next
