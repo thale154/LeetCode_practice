@@ -9,7 +9,7 @@ class Solution:
         fast = head
         slow = head
         prev = None # previous node 
-        while fast and fast.next:
+        while fast != None and fast.next != None:
             slow = slow.next
             fast = fast.next.next
         while slow:
