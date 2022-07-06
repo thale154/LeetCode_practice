@@ -1,7 +1,7 @@
 # Write your MySQL query statement below
 SELECT
     customer_id,
-    COUNT(*) as count_no_trans
+    COUNT(customer_id) as count_no_trans
 FROM
     Visits
 WHERE
