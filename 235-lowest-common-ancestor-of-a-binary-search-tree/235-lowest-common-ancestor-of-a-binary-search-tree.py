@@ -14,5 +14,4 @@ class Solution:
             return self.lowestCommonAncestor(root.left, p, q)
         elif (pVal > rootVal) and (qVal > rootVal):
             return self.lowestCommonAncestor(root.right, p, q)
-        else:
-            return root
+        return root
