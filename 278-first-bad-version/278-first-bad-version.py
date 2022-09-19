@@ -7,7 +7,8 @@ class Solution:
         left = 1
         while (left <= right):
             mid = (left + right)//2
-            if (isBadVersion(mid) == True): #is bad
+            x = isBadVersion(mid)
+            if (x == True): #is bad
                 right = mid - 1
             else:
                 left = mid + 1
